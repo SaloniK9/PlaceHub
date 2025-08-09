@@ -1,0 +1,138 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Amazon - PCCOE Placement Guide</title>
+  <style>
+    body {
+      background: url('place.avif') no-repeat center center fixed;
+      background-size: cover;
+      min-height: 100vh;
+    }
+    
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(77, 76, 76, 0.051);
+      z-index: -1;
+      pointer-events: none;
+    }
+
+    .glass-card {
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+    }
+
+    header {
+      background-color: #003366; /* Amazon dark blue */
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .tabs {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .tabs button {
+      background-color: #e2e8f0;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+
+    .tabs button:hover {
+      background-color: #cbd5e1;
+    }
+
+    .content {
+      display: none;
+      max-width: 900px;
+      margin: 20px auto;
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #ccc;
+    }
+
+    .content.active {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Amazon</h1>
+    <a href="index.html" 
+     style="position:absolute; top:20px; left:20px; background:#003366; color:white; text-decoration:none; padding:8px 16px; border-radius:6px; font-weight:bold;">
+     ⬅ Home
+  </a>
+  </header>
+
+  <div class="tabs">
+    <button onclick="showContent('about')">About Company</button>
+    <button onclick="showContent('skills')">Skills Required</button>
+    <button onclick="showContent('criteria')">Placement Criteria</button>
+    <button onclick="showContent('interview')">Interview Questions</button>
+  </div>
+
+  <div id="about" class="content active">
+    <h2>About Company</h2>
+    <p><strong>Founded in 1994</strong> by Jeff Bezos, Amazon started as an online bookstore and has evolved into one of the world’s largest e-commerce and cloud computing companies.</p>
+    <p><strong>Amazon Web Services (AWS):</strong> Amazon is not just about e-commerce; it also leads the global cloud computing market through AWS, providing solutions for businesses of all sizes.</p>
+    <p><strong>How Amazon Works:</strong> Amazon focuses on customer obsession, operational excellence, and innovation. It operates in e-commerce, digital streaming, AI, and logistics while maintaining a strong emphasis on technology.</p>
+    <p><strong>Future Vision (Next 5 Years):</strong> Amazon aims to expand in AI-driven automation, global logistics, and cloud computing, making services faster, more secure, and sustainable.</p>
+  </div>
+
+  <div id="skills" class="content">
+    <h2>Skills Required</h2>
+    <ul>
+      <li>Proficiency in programming (Java, Python, C++)</li>
+      <li>Strong understanding of Data Structures and Algorithms</li>
+      <li>Knowledge of System Design and Operating Systems</li>
+      <li>Database knowledge (SQL, NoSQL)</li>
+      <li>Problem-solving, analytical skills, and adaptability</li>
+    </ul>
+  </div>
+
+  <div id="criteria" class="content">
+    <h2>Placement Criteria</h2>
+    <ul>
+      <li>Minimum 6.5 CGPA in graduation</li>
+      <li>No active backlogs during recruitment</li>
+      <li>Strong technical foundation and coding proficiency</li>
+      <li>Online Assessment → Technical Interviews → HR Interview</li>
+    </ul>
+  </div>
+
+  <div id="interview" class="content">
+    <h2>Interview Questions</h2>
+    <ul>
+      <li>Explain the difference between Array and Linked List.</li>
+      <li>Design a system for an online shopping cart.</li>
+      <li>Write a program to find the longest substring without repeating characters.</li>
+      <li>Explain AWS and its core services.</li>
+      <li>Tell me about a challenging project you worked on.</li>
+    </ul>
+  </div>
+
+  <script>
+    function showContent(id) {
+      const contents = document.querySelectorAll('.content');
+      contents.forEach(content => content.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+    }
+  </script>
+</body>
+</html>

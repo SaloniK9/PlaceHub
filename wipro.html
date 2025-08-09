@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>Wipro – Placement Guide</title>
+  <style>
+    
+        body {
+            background: url('place.avif') no-repeat center center fixed;
+            background-size: cover;
+            min-height: 100vh;
+        }
+          
+   body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(77, 76, 76, 0.051);
+    z-index: -1; 
+    pointer-events: none; /* ✅ This allows clicks to pass through */
+}
+        .glass-card {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+        }
+    header { background:#003366; color:white; padding:20px; text-align:center; }
+    .tabs { display:flex; justify-content:center; flex-wrap:wrap; gap:15px; margin:20px; }
+    .tabs button { background:#dcdde1; border:none; padding:10px 20px; border-radius:6px; cursor:pointer; font-weight:bold; }
+    .tabs button:hover { background:#a4b0be; }
+    .content { display:none; max-width:900px; margin:20px auto; background:white; padding:20px; border-radius:8px; box-shadow:0 0 10px #ccc; }
+    .content.active { display:block; }
+    h2 { margin-top:0; }
+    ul { margin-left:20px; }
+  </style>
+</head>
+<body>
+
+  <header>
+  <h1>Wipro Limited</h1>
+  <a href="index.html" 
+     style="position:absolute; top:20px; left:20px; background:#003366; color:white; text-decoration:none; padding:8px 16px; border-radius:6px; font-weight:bold;">
+     ⬅ Home
+  </a>
+</header>
+
+  <div class="tabs">
+    <button onclick="show('about')">About Company</button>
+    <button onclick="show('skills')">Skills Required</button>
+    <button onclick="show('criteria')">Placement Criteria</button>
+    <button onclick="show('interview')">Interview Questions</button>
+  </div>
+
+  <div id="about" class="content active">
+    <h2>About Company</h2>
+    <p><strong></strong> Wipro was founded in 1945 as Western India Vegetable Products Ltd. Initially a consumer products company, it transformed into an IT services giant in the 1980s under the leadership of Azim Premji. By the 2000s, Wipro had become a global player in IT services, consulting, and business process services.</p>
+    <p><strong></strong> Wipro is a global information technology, consulting, and business process services company. Wipro provides a wide range of services including IT solutions and services, systems integration, outsourcing, and more. It serves various industries like healthcare, retail, and finance.</p>
+    <p><strong>Current Status (2025):</strong> As of 2025, Wipro employs over 240,000 professionals across 65 countries and reported revenues exceeding US $11 billion. It delivers services in AI, cybersecurity, cloud, engineering, data analytics, and IT modernization. Wipro works with Fortune 500 clients in sectors like BFSI, healthcare, energy, retail, and manufacturing.</p>
+    <p><strong>Recent Developments:</strong> Wipro has made strategic acquisitions in AI and cloud (Capco, Rizing, Topcoder). Thierry Delaporte, the CEO since 2020, initiated a company-wide transformation that includes the “One Wipro” model. Wipro launched its AI360 ecosystem in 2023 and continues to invest in GenAI, quantum computing, and green IT practices.</p>
+    <p><strong>Future Vision (Next 5 Years):</strong> Wipro aims to be a leader in **AI-driven enterprise services** and digital innovation by 2030. The company plans to double its GenAI investments, expand into sustainability tech, and build client-centric innovation hubs globally. Focus areas include hyperautomation, digital twins, and ethical AI.</p>
+  </div>
+
+  <div id="skills" class="content">
+    <h2>Skills Required</h2>
+    <ul>
+      <li>Good understanding of programming languages like Java, Python, C/C++</li>
+      <li>Data Structures & Algorithms (DSA) knowledge</li>
+      <li>Problem-solving and analytical thinking</li>
+      <li>Basics of databases, SQL, and web technologies</li>
+      <li>Soft skills: communication, teamwork, adaptability</li>
+      <li>Awareness of cloud platforms (AWS, Azure), DevOps, or AI tools is a plus</li>
+    </ul>
+  </div>
+
+  <div id="criteria" class="content">
+    <h2>Placement Criteria</h2>
+    <ul>
+      <li>Minimum 60% in 10th, 12th, and graduation</li>
+      <li>No active backlogs at the time of application</li>
+      <li>Graduation from recognized universities (B.E/B.Tech/MCA)</li>
+      <li>Good communication and interpersonal skills</li>
+      <li>Willingness to relocate and work in shifts (if required)</li>
+      <li>Hiring Process: Online Aptitude + Coding → Technical Interview → HR Interview</li>
+    </ul>
+  </div>
+
+  <div id="interview" class="content">
+    <h2>Interview Questions</h2>
+    <ul>
+      <li>Explain Object-Oriented Programming (OOP) concepts with examples.</li>
+      <li>Write a program to check if a number is a palindrome.</li>
+      <li>What is the difference between stack and queue?</li>
+      <li>Explain your final year project.</li>
+      <li>Scenario: How would you resolve a conflict in a team?</li>
+      <li>HR: Why do you want to join Wipro? Where do you see yourself in 5 years?</li>
+    </ul>
+  </div>
+
+  <script>
+    function show(id) {
+      document.querySelectorAll('.content').forEach(div => div.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+    }
+  </script>
+
+</body>
+</html>
