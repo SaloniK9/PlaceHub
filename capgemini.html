@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>Capgemini – Placement Guide</title>
+  <link rel = "stylesheet" href = "style.css">
+</head>
+<body>
+
+  <header>
+    <h1>Capgemini</h1>
+    <a href="index.html" 
+     style="position:absolute; top:20px; left:20px; background:#003366; color:white; text-decoration:none; padding:8px 16px; border-radius:6px; font-weight:bold;">
+     Home
+  </a>
+  </header>
+
+  <div class="tabs">
+    <button onclick="show('about')">About Company</button>
+    <button onclick="show('skills')">Skills Required</button>
+    <button onclick="show('criteria')">Placement Criteria</button>
+    <button onclick="show('interview')">Interview Questions</button>
+  </div>
+
+  <div id="about" class="content active">
+    <h2>About Company</h2>
+    <p><strong></strong> Founded in 1967 in Paris by Serge Kampf, Capgemini has evolved from a local data-processing firm into a global leader in IT services and consulting with over €22 billion in revenue in 2024 and ~338,000 employees worldwide in 2024–25.</p>
+    <p><strong></strong> Capgemini is a global leader in consulting, technology services, and digital transformation. It provides a wide array of services, including IT consulting, digital transformation, cloud services, cybersecurity, and engineering. The company focuses on helping clients leverage technology to accelerate their digital and sustainable transitions, creating tangible impact for both businesses and society, according to Capgemini. With a large global presence and a strong focus on innovation, Capgemini is a major player in the technology services industry.</p>
+    <p><strong>Current Status:</strong> Capgemini provides consulting, cloud, cybersecurity, AI, and enterprise services across sectors such as BFSI, retail, and energy. Through subsidiaries like Capgemini Invent and acquisitions like frog design and WNS, it is expanding digital innovation and business process transformation capabilities.</p>
+    <p><strong>Recent Developments:</strong> In mid‑2025, Capgemini acquired WNS for $3.3 billion to strengthen its AI-driven business process services and global footprint, aiming to lead in Agentic AI and GenAI adoption across industries. Despite global economic headwinds, it maintained operating margin guidance and reported modest revenue growth, especially in North America and APAC.</p>
+    <p><strong>Future Outlook (2026–2030):</strong> Capgemini plans to scale generative and agentic AI into enterprise operations, pursue sustainability initiatives (zero‑net emissions), grow consulting-led services, and continue building innovation platforms like quantum labs and AI agents for business transformation.</p>
+  </div>
+
+  <div id="skills" class="content">
+    <h2>Skills Required</h2>
+    <ul>
+      <li>Programming (Java, C/C++, Python) and DS & Algo expertise</li>
+      <li>Logical reasoning and quantitative aptitude</li>
+      <li>Familiarity with AI/ML, cloud platforms, cybersecurity tools</li>
+      <li>Soft skills: communication, teamwork, adaptability</li>
+      <li>Behavioral alignment with Capgemini values: honesty, trust, boldness, freedom, teamwork, modesty, fun :contentReference[oaicite:6]{index=6}</li>
+    </ul>
+  </div>
+
+  <div id="criteria" class="content">
+    <h2>Placement Criteria</h2>
+    <ul>
+      <li>Minimum 60%/6 CGPA in Class 10, 12 and graduation</li>
+      <li>No active backlogs during recruitment</li>
+      <li>Selection process includes: online aptitude + game-based tests → personality profiling → technical interview → HR interview :contentReference[oaicite:7]{index=7}</li>
+      <li>Performance grading via Capgemini’s Exceller roles with salary bands (~₹4–7 LPA with bonuses) :contentReference[oaicite:8]{index=8}</li>
+    </ul>
+  </div>
+
+  <div id="interview" class="content">
+    <h2>Interview Questions</h2>
+    <ul>
+      <li>Explain normalization and difference between UNION and UNION ALL in SQL :contentReference[oaicite:9]{index=9}</li>
+      <li>Coding: Palindrome or linked list reversal</li>
+      <li>Describe OOP principles, SDLC model used in projects</li>
+      <li>Tell me about yourself and why Capgemini?</li>
+      <li>Behavioral situational questions (e.g. team conflict, ethics) based on ADEPT‑15 competency assessment :contentReference[oaicite:10]{index=10}</li>
+      <li>Leadership & values alignment questions (trust, boldness, modesty, freedom) :contentReference[oaicite:11]{index=11}</li>
+    </ul>
+  </div>
+
+  <script>
+    function show(id) {
+      document.querySelectorAll('.content').forEach(div => div.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+    }
+  </script>
+
+</body>
+</html>

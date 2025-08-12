@@ -1,0 +1,72 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Google - PCCOE Placement Guide</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Google</h1>
+    <a href="index.html"
+     style="position:absolute; top:20px; left:20px; background:#003366; color:white; text-decoration:none; padding:8px 16px; border-radius:6px; font-weight:bold;">
+     Home
+    </a>
+  </header>
+
+  <div class="tabs">
+    <button onclick="showContent('about')">About Company</button>
+    <button onclick="showContent('skills')">Skills Required</button>
+    <button onclick="showContent('criteria')">Placement Criteria</button>
+    <button onclick="showContent('interview')">Interview Questions</button>
+  </div>
+
+  <div id="about" class="content active">
+    <h2>About Company</h2>
+    <p><strong>Founded in 1998</strong> by Larry Page and Sergey Brin, Google started as a search engine and has grown into a global technology leader.</p>
+    <p><strong>Core Areas:</strong> Search, advertising, Android, YouTube, cloud computing, and AI research.</p>
+    <p><strong>Culture:</strong> Known for innovation, employee-friendly work environment, and cutting-edge research.</p>
+    <p><strong>Future Vision:</strong> Focused on AI-first solutions, quantum computing, and sustainable technology initiatives.</p>
+  </div>
+
+  <div id="skills" class="content">
+    <h2>Skills Required</h2>
+    <ul>
+      <li>Strong programming in C++, Java, or Python</li>
+      <li>Advanced Data Structures and Algorithms</li>
+      <li>Machine Learning fundamentals</li>
+      <li>System design & scalability concepts</li>
+      <li>Problem-solving and analytical thinking</li>
+    </ul>
+  </div>
+
+  <div id="criteria" class="content">
+    <h2>Placement Criteria</h2>
+    <ul>
+      <li>Minimum 7.0 CGPA</li>
+      <li>No active backlogs</li>
+      <li>Strong problem-solving track record (LeetCode, Codeforces, etc.)</li>
+      <li>Multiple interview rounds: Online Test → Technical Rounds → HR</li>
+    </ul>
+  </div>
+
+  <div id="interview" class="content">
+    <h2>Interview Questions</h2>
+    <ul>
+      <li>Implement a Trie data structure.</li>
+      <li>Design a scalable URL shortening service.</li>
+      <li>Find the median of two sorted arrays.</li>
+      <li>Explain PageRank algorithm.</li>
+      <li>Describe a challenging bug you fixed.</li>
+    </ul>
+  </div>
+
+  <script>
+    function showContent(id) {
+      const contents = document.querySelectorAll('.content');
+      contents.forEach(content => content.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+    }
+  </script>
+</body>
+</html>

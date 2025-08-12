@@ -1,0 +1,72 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Deloitte - PCCOE Placement Guide</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Deloitte</h1>
+    <a href="index.html"
+     style="position:absolute; top:20px; left:20px; background:#003366; color:white; text-decoration:none; padding:8px 16px; border-radius:6px; font-weight:bold;">
+     ⬅ Home
+    </a>
+  </header>
+
+  <div class="tabs">
+    <button onclick="showContent('about')">About Company</button>
+    <button onclick="showContent('skills')">Skills Required</button>
+    <button onclick="showContent('criteria')">Placement Criteria</button>
+    <button onclick="showContent('interview')">Interview Questions</button>
+  </div>
+
+  <div id="about" class="content active">
+    <h2>About Company</h2>
+    <p><strong>Founded in 1845</strong>, Deloitte is one of the "Big Four" accounting and professional services firms, offering consulting, audit, tax, and advisory services.</p>
+    <p><strong>Core Areas:</strong> Business consulting, technology integration, risk management, and analytics.</p>
+    <p><strong>Presence:</strong> Operates in over 150 countries with clients across multiple sectors including finance, healthcare, and technology.</p>
+    <p><strong>Future Vision:</strong> Becoming a leader in data-driven consulting and AI-powered business strategy.</p>
+  </div>
+
+  <div id="skills" class="content">
+    <h2>Skills Required</h2>
+    <ul>
+      <li>Programming skills (Java, Python, SQL)</li>
+      <li>Business and data analysis skills</li>
+      <li>Understanding of ERP systems (SAP, Oracle)</li>
+      <li>Problem-solving and logical thinking</li>
+      <li>Strong communication and presentation skills</li>
+    </ul>
+  </div>
+
+  <div id="criteria" class="content">
+    <h2>Placement Criteria</h2>
+    <ul>
+      <li>Minimum 6.5 CGPA</li>
+      <li>No active backlogs</li>
+      <li>Strong analytical and business understanding</li>
+      <li>Process: Online Test → Case Study Round → Technical/HR Interview</li>
+    </ul>
+  </div>
+
+  <div id="interview" class="content">
+    <h2>Interview Questions</h2>
+    <ul>
+      <li>Explain the difference between INNER JOIN and LEFT JOIN in SQL.</li>
+      <li>How would you analyze financial data for trends?</li>
+      <li>Write a program to check for prime numbers.</li>
+      <li>Describe a business problem you solved using technology.</li>
+      <li>What do you know about Deloitte’s consulting services?</li>
+    </ul>
+  </div>
+
+  <script>
+    function showContent(id) {
+      const contents = document.querySelectorAll('.content');
+      contents.forEach(content => content.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accenture - PCCOE Placement Guide</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Accenture</h1>
+    <a href="index.html"
+     style="position:absolute; top:20px; left:20px; background:#003366; color:white; text-decoration:none; padding:8px 16px; border-radius:6px; font-weight:bold;">
+     ⬅ Home
+    </a>
+  </header>
+
+  <div class="tabs">
+    <button onclick="showContent('about')">About Company</button>
+    <button onclick="showContent('skills')">Skills Required</button>
+    <button onclick="showContent('criteria')">Placement Criteria</button>
+    <button onclick="showContent('interview')">Interview Questions</button>
+  </div>
+
+  <div id="about" class="content active">
+    <h2>About Company</h2>
+    <p><strong>Founded in 1989</strong>, Accenture is a global professional services company specializing in IT services, consulting, and outsourcing.</p>
+    <p><strong>Core Areas:</strong> Digital transformation, cloud migration, strategy consulting, and AI integration.</p>
+    <p><strong>Global Presence:</strong> Operates in more than 120 countries, serving clients across all major industries.</p>
+    <p><strong>Future Vision:</strong> Leading in AI-driven consulting, sustainable tech solutions, and global innovation hubs.</p>
+  </div>
+
+  <div id="skills" class="content">
+    <h2>Skills Required</h2>
+    <ul>
+      <li>Basic programming skills (Java, Python, C++)</li>
+      <li>Problem-solving and logical reasoning</li>
+      <li>Good understanding of SDLC and Agile</li>
+      <li>Communication and teamwork skills</li>
+      <li>Adaptability to new technologies</li>
+    </ul>
+  </div>
+
+  <div id="criteria" class="content">
+    <h2>Placement Criteria</h2>
+    <ul>
+      <li>Minimum 6.5 CGPA</li>
+      <li>No active backlogs</li>
+      <li>Good aptitude and communication skills</li>
+      <li>Process: Online Aptitude Test → Technical Interview → HR Interview</li>
+    </ul>
+  </div>
+
+  <div id="interview" class="content">
+    <h2>Interview Questions</h2>
+    <ul>
+      <li>Explain OOP concepts with examples.</li>
+      <li>Write a program to reverse a string.</li>
+      <li>What is the difference between Agile and Waterfall?</li>
+      <li>How would you handle a difficult client request?</li>
+      <li>Describe your final year project.</li>
+    </ul>
+  </div>
+
+  <script>
+    function showContent(id) {
+      const contents = document.querySelectorAll('.content');
+      contents.forEach(content => content.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+    }
+  </script>
+</body>
+</html>
