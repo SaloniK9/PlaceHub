@@ -16,7 +16,7 @@ A website which connects students with placement opportunities
 ## 🛠️ Tech Stack
 - **HTML5**  
 - **CSS3**  
-- **JavaScript **  
+- **JavaScript**  
 
 ---
 
