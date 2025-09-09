@@ -18,7 +18,7 @@
             min-height: 100vh;
         }
           
-   body::before {
+    body::before {
     content: "";
     position: fixed;
     top: 0;
@@ -37,37 +37,6 @@
         .hidden-section {
             display: none;
         }
-#chatbot-button {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background: #003366; /* Blue */
-    color: rgb(148, 212, 226);
-    padding: 26px;
-    border-radius: 80%;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
-    cursor: pointer;
-    z-index: 9999; /* FLOAT above everything */
-}
-
-#chatbot-window {
-    position: fixed;
-    bottom: 80px;
-    right: 20px;
-    background: white;
-    width: 320px;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
-    z-index: 9999;
-}
- #chatbot-button {
-        z-index: 9999;
-    }
-
-    #chatbot-window {
-        z-index: 99999;
-    }
-
     </style>
 </head>
 <body class="text-white font-sans">
@@ -83,7 +52,6 @@
         </nav>
     </div>
 </header>
-
 
 
     
@@ -181,54 +149,6 @@
 </p>
 </section>
 
-<div id="chatbot-button" class="fixed bottom-6 right-6 bg-blue-500 text-white p-4 rounded-full shadow-lg cursor-pointer">
-    💬
-</div>
-
-<div id="chatbot-window" class="hidden fixed bottom-20 right-6 bg-white w-80 rounded-lg shadow-lg p-4">
-    <div class="flex justify-between items-center border-b pb-2">
-        <h3 class="font-bold text-lg text-black">AI Placement Bot</h3>
-        <button id="close-bot" class="text-red-500">✖</button>
-    </div>
-    <div id="chat-content" class="h-60 overflow-y-auto text-sm text-black p-2 mb-2 bg-gray-100 rounded"></div>
-    <input type="text" id="chat-input" placeholder="Ask about companies..." class="w-full p-2 border rounded text-black">
-</div><script>
-    const botButton = document.getElementById('chatbot-button');
-    const botWindow = document.getElementById('chatbot-window');
-    const closeBot = document.getElementById('close-bot');
-    const chatContent = document.getElementById('chat-content');
-    const chatInput = document.getElementById('chat-input');
-
-    botButton.addEventListener('click', () => botWindow.classList.toggle('hidden'));
-    closeBot.addEventListener('click', () => botWindow.classList.add('hidden'));
-
-    chatInput.addEventListener('keypress', async (e) => {
-        if (e.key === 'Enter') {
-            const question = chatInput.value.trim();
-            if (!question) return;
-
-            chatContent.innerHTML += `<div class='text-blue-600 mb-1'>You: ${question}</div>`;
-
-            const response = await fetch("http://localhost:5000/chat", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json"
-                },
-                body: JSON.stringify({ message: question })
-            });
-
-            const data = await response.json();
-            const answer = data.reply || "Sorry, I couldn't fetch an answer.";
-
-            chatContent.innerHTML += `<div class='text-green-600 mb-2'>Bot: ${answer}</div>`;
-            chatInput.value = "";
-            chatContent.scrollTop = chatContent.scrollHeight;
-        }
-    });
-</script>
-
-
-
 
     <!-- FOOTER -->
     <footer class="bg-[#003366] text-white py-6 text-center mt-6">
@@ -236,14 +156,6 @@
 </footer>
 
     <script>
-        const scrollContainer = document.getElementById("companyList");
-        document.getElementById("scrollLeft").addEventListener("click", () => {
-            scrollContainer.scrollBy({ left: -300, behavior: 'smooth' });
-        });
-        document.getElementById("scrollRight").addEventListener("click", () => {
-            scrollContainer.scrollBy({ left: 300, behavior: 'smooth' });
-        });
-
         // Show About and Agenda sections when clicked
         document.getElementById("aboutBtn").addEventListener("click", () => {
             document.getElementById("about").style.display = "block";
